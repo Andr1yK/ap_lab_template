@@ -1,6 +1,6 @@
 m="$1"
 
-if [ "$m" == "test" ] && [ -d "./build" ]; then
+if [ "$m" == "--test" ] && [ -d "./build" ]; then
   rm -r "build"
 fi
 
@@ -10,7 +10,7 @@ cd ./build
 cmake ..
 make
 
-if [ "$m" == "test" ]; then
+if [ "$m" == "--test" ]; then
   ./unittest
 else
   ./demo
