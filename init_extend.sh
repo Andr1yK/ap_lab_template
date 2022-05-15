@@ -12,7 +12,7 @@ void $file_name() {\n\
 // code here\n\
 }\n\
 \n\
-#endif"
+#endif // !_${define}_"
 
 echo $code > src/extends/$file_name.cpp
 
