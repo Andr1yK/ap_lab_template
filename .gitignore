@@ -33,3 +33,4 @@
 
 # Custom path
 /build
+./all_extends.*
