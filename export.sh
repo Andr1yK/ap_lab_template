@@ -2,13 +2,13 @@ src_dir="./src"
 search_dir="$src_dir/extends"
 exported_file='./all_extends.txt'
 
-echo "main.cpp" > $exported_file
+echo "main_rec.cpp" > $exported_file
 
 IFS=''
 while read line;
 do
-  echo $line >> $exported_file;
-done < "$src_dir/main.cpp"
+  echo "  $line" >> $exported_file;
+done < "$src_dir/main_rec.cpp"
 
 for entry in "$search_dir"/*
 do
@@ -16,7 +16,7 @@ do
 
   while read line;
   do
-    echo $line >> $exported_file;
+    echo "  $line" >> $exported_file;
   done < $entry
 done
 
